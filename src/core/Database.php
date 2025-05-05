@@ -54,6 +54,7 @@ class Database extends PDO
   {
     $stmt = $this->conn->prepare($query);
     $this->mountQuery($stmt, $parameters);
+
     $stmt->execute();
     return $stmt;
   }

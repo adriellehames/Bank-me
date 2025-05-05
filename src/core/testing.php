@@ -1,11 +1,9 @@
 <?php
 
+include("../models/register.php");
 
-include("./Database.php");
+$obj1 = new Register('name','surname','cpf', 'rg','2020-01-01', '9321921', 'SC', 'saojose', 'bairroas', 'endereco', 390, 'casa', 3000, 'dev', '4831821321', 'C:\32321.jpg', 'adsasd@dass.com', '2025-01-01', 'pending', NULL );
 
-$conexao = new Database();
-
-
-$resultado = $conexao->fetchQuery('SELECT * FROM users');
-
-var_dump($resultado[0]['name']);
+// $resultado = $conexao->fetchQuery('SELECT * FROM users');
+$obj1->insertDb();
+// var_dump($resultado[0]['name']);
