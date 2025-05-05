@@ -73,8 +73,16 @@ class Register
         $this->db = new Database();
     }
 
+    private function validation()
+    {
+        throw new Exception("Falha ao processar: Idade deve ser maior que 18 anos");
+    }
+
     public function insertDb()
-    { // estou usando o "executequery" do  Database.php
+
+    { 
+        $this->validation();
+        // estou usando o "executequery" do  Database.phpt
         $query = ("INSERT INTO register (name, surname, cpf, rg, birth_date, postal_code,state,city,district,adress, number,complement,monthly_income,profession,telephone, document_photo,email,request_date,status_register ) VALUES (:name, :surname, :cpf, :rg, :birth_date, :postal_code,:state,:city,:district,:adress, :number,:complement,:monthly_income,:profession,:telephone, :document_photo,:email,:request_date,:status_register )");
         $params = [
             ':name' => $this->name,
