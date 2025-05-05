@@ -3,7 +3,7 @@
 class Database extends PDO
 {
 
-  private $DB_NAME = 'bankme';
+  private $DB_NAME = 'bank_me';
   private $DB_USER = 'userbanco';
   private $DB_PASSWORD = '123456';
   private $DB_HOST = '127.0.0.1';
