@@ -1,6 +1,10 @@
 <?php
- ini_set('display_errors', 1);
- error_reporting(E_ALL);
+ 
+  echo "register.php foi chamado<br>";
+  ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+var_dump($_POST);
  
 
 require_once '../core/Database.php'; //importantado o arquivo Database.php
@@ -126,7 +130,7 @@ class Register
     public function insertDb()
 
     { 
-        try{
+         
         $this->validation();
         // estou usando o "executequery" do  Database.phpt
         $query = ("INSERT INTO register (name, surname, cpf, rg, birth_date, postal_code,state,city,district,adress, number,complement,monthly_income,profession,telephone, document_photo,email,request_date,status_register ) VALUES (:name, :surname, :cpf, :rg, :birth_date, :postal_code,:state,:city,:district,:adress, :number,:complement,:monthly_income,:profession,:telephone, :document_photo,:email,:request_date,:status_register )");
@@ -151,7 +155,7 @@ class Register
             ':request_date' => $this->request_date,
             ':status_register' => $this->status_register
         ];
-
+        try{
 
         $this->db->executeQuery($query, $params); //executando a inserção de dados
 
