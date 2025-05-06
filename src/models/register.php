@@ -1,4 +1,7 @@
 <?php
+ ini_set('display_errors', 1);
+ error_reporting(E_ALL);
+ 
 
 require_once '../core/Database.php'; //importantado o arquivo Database.php
 
@@ -75,12 +78,55 @@ class Register
 
     private function validation()
     {
-        throw new Exception("Falha ao processar: Idade deve ser maior que 18 anos");
+        //Listando campos obrigatórios-array associativo
+        $required_fields= [
+        'name' => $this->name,
+        'surname'=> $this-> surname, 
+        'cpf'=> $this-> cpf, 
+        'rg'=> $this-> rg,
+        'birth_date'=> $this-> birth_date,
+        'postal_code'=> $this->postal_code,
+        'state'=> $this-> state,
+        'city'=> $this-> city,
+        'district'=> $this-> district,
+        'adress'=> $this-> adress,
+        'number'=> $this-> number,
+        'complement'=> $this->complement,
+        'telephone'=> $this-> telephone,
+        'document_photo'=> $this-> document_photo,
+        'email'=> $this-> email,
+        'request_date'=> $this->request_date,
+        'status_register'=> $this-> status_register,
+ 
+        ];
+
+        //verifica se algum campo obrigatório está vazio
+        foreach ($required_fields as $nomeCampo => $valorCampo) {
+            if (empty(trim($valorCampo))) {
+                throw new Exception("O campo '$nomeCampo' é obrigatório.");
+            }
+        }
+
+        //verificando idade
+        $dataNascimento = new DateTime($this->birth_date);
+        $dataAtual = new DateTime();
+        $idade = $dataAtual->diff($dataNascimento)->y;
+    
+     if ($idade < 18){
+     throw new Exception("Sua idade deve ser maior ou igual a 18 anos para realizar o cadastro");
     }
 
+    //verificando email
+    if (!filter_var(trim($this->email),FILTER_VALIDATE_EMAIL)){
+        throw new Exception("Email inválido");
+    }
+
+
+    }
     public function insertDb()
 
     { 
+        try{
         $this->validation();
         // estou usando o "executequery" do  Database.phpt
         $query = ("INSERT INTO register (name, surname, cpf, rg, birth_date, postal_code,state,city,district,adress, number,complement,monthly_income,profession,telephone, document_photo,email,request_date,status_register ) VALUES (:name, :surname, :cpf, :rg, :birth_date, :postal_code,:state,:city,:district,:adress, :number,:complement,:monthly_income,:profession,:telephone, :document_photo,:email,:request_date,:status_register )");
@@ -108,5 +154,11 @@ class Register
 
 
         $this->db->executeQuery($query, $params); //executando a inserção de dados
+
+        echo "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
+    } catch (Exception $e) {
+        echo "Erro no cadastro: " . $e->getMessage();
+    }
+
     }
 }
