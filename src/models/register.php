@@ -1,13 +1,8 @@
 <?php
- 
-  echo "register.php foi chamado<br>";
-  ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-var_dump($_POST);
- 
+
 
 require_once '../core/Database.php'; //importantado o arquivo Database.php
+ 
 
 class Register
 {
@@ -72,14 +67,19 @@ class Register
         $this->monthly_income = $monthly_income;
         $this->profession = $profession;
         $this->telephone = $telephone;
-        $this->document_photo = $document_photo;
+        $this->document_photo = $document_photo; 
         $this->email = $email;
         $this->request_date = $request_date;
         $this->status_register = $status_register;
         $this->user_complience_approve = $user_complience_approve;
         $this->db = new Database();
+         
+
     }
 
+ 
+
+ 
     private function validation()
     {
         //Listando campos obrigatórios-array associativo
@@ -103,7 +103,7 @@ class Register
         'status_register'=> $this-> status_register,
  
         ];
-
+ 
         //verifica se algum campo obrigatório está vazio
         foreach ($required_fields as $nomeCampo => $valorCampo) {
             if (empty(trim($valorCampo))) {
@@ -125,7 +125,9 @@ class Register
         throw new Exception("Email inválido");
     }
 
+ 
 
+ 
     }
     public function insertDb()
 
@@ -162,6 +164,8 @@ class Register
         echo "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
     } catch (Exception $e) {
         echo "Erro no cadastro: " . $e->getMessage();
+
+    echo "ok";
     }
 
     }
