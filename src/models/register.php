@@ -155,7 +155,7 @@ class Register
             ':document_photo' => $this->document_photo,
             ':email' => $this->email,
             ':request_date' => $this->request_date,
-            ':status_register' => $this->status_register
+            ':status_register' =>"pending",
         ];
         try{
 
@@ -165,7 +165,7 @@ class Register
     } catch (Exception $e) {
         echo "Erro no cadastro: " . $e->getMessage();
 
-    echo "ok";
+   
     }
 
     }
