@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php
+namespace Views;
+
+class HomeView
+{
+
+    public function __construct() {}
+
+    public function render()
+    {
+
+        return <<<HTML
+        <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -196,3 +208,6 @@
 
 </body>
 </html>
+HTML;
+    }
+}
