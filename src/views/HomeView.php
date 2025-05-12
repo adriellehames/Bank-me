@@ -1,3 +1,12 @@
+<?php
+
+namespace Views;
+
+class HomeView {
+
+    public function render() {
+       
+        return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,15 +105,15 @@
             </button>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="pages/products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/feactures.html">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/integration.html">Integrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feactures">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="integration">Integrations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources">Resources</a></li>
                 </ul>
 
                 <div class="d-flex auth-links">
-                    <a class="btn btn-warning me-2" href="pages/login.html">Login</a>
-                    <a class="btn btn-light" href="pages/registrer.html">Register</a>
+                    <a class="btn btn-warning me-2" href="login">Login</a>
+                    <a class="btn btn-light" href="register">Register</a>
                 </div>
             </div>
 
@@ -196,3 +205,7 @@
 
 </body>
 </html>
+HTML;
+    }
+}
+?>

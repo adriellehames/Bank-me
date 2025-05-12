@@ -1,29 +1,14 @@
 <?php
-require_once __DIR__ . '/../core/Database.php';
+
+namespace Models;
+
+use Core\Database;
+use DateTime;
+use Exception;
+use PDOException;
 
 class Register {
     private $db;
-    private $id;
-    private $name;
-    private $surname;
-    private $cpf;
-    private $rg;
-    private $birth_date;
-    private $postal_code;
-    private $state;
-    private $city;
-    private $district;
-    private $adress;
-    private $number;
-    private $complement;
-    private $monthly_income;
-    private $profession;
-    private $telephone;
-    private $document_photo;
-    private $email;
-    private $request_date;
-    private $status_register;
-    private $user_complience_approve;
 
     public function __construct() {
         $this->db = new Database();

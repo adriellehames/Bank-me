@@ -1,4 +1,7 @@
 <?php
+
+namespace Views;
+
 class RegisterView {
     private $message = '';
     private $messageType = '';

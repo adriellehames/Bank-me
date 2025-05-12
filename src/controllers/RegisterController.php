@@ -1,6 +1,10 @@
 <?php
-require_once __DIR__ . '/../models/register.php';
-require_once __DIR__ . '/../views/RegisterView.php';
+
+namespace Controllers;
+
+use Models\Register;
+use Views\RegisterView;
+use Exception;
 
 class RegisterController {
     private $model;
@@ -11,17 +15,17 @@ class RegisterController {
         $this->view = new RegisterView();
     }
 
-    public function render() {
-        return $this->view->render();
+    public function index() {
+        echo $this->view->render();
     }
 
     public function processRegistration() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            return $this->view->render('Método inválido', 'danger');
+            echo $this->view->render('Método inválido', 'danger');
         }
         // Validar upload da foto do documento
         if (!isset($_FILES['document_photo']) || $_FILES['document_photo']['error'] !== UPLOAD_ERR_OK) {
-            return $this->view->render('É necessário enviar a foto do documento', 'danger');
+            echo $this->view->render('É necessário enviar a foto do documento', 'danger');
         }
 
         // Processar upload da foto
@@ -34,14 +38,14 @@ class RegisterController {
         $allowedExtensions = ['jpg', 'jpeg', 'png', 'pdf'];
         
         if (!in_array($fileExtension, $allowedExtensions)) {
-            return $this->view->render('Formato de arquivo não permitido. Use JPG, PNG ou PDF', 'danger');
+            echo $this->view->render('Formato de arquivo não permitido. Use JPG, PNG ou PDF', 'danger');
         }
 
         $fileName = uniqid('doc_') . '.' . $fileExtension;
         $uploadFile = $uploadDir . $fileName;
 
         if (!move_uploaded_file($_FILES['document_photo']['tmp_name'], $uploadFile)) {
-            return $this->view->render('Erro ao fazer upload do documento', 'danger');
+            echo $this->view->render('Erro ao fazer upload do documento', 'danger');
         }
 
         // Preparar dados para o modelo
@@ -68,12 +72,12 @@ class RegisterController {
         try {
             // Salvar no banco de dados
             if ($this->model->create($userData)) {
-                return $this->view->render('Pré-registro realizado com sucesso! Verifique seu email para próximos passos.', 'success');
+                echo $this->view->render('Pré-registro realizado com sucesso! Verifique seu email para próximos passos.', 'success');
             } else {
-                return $this->view->render('Erro ao salvar os dados', 'danger');
+                echo $this->view->render('Erro ao salvar os dados', 'danger');
             }
         } catch (Exception $e) {
-            return $this->view->render('Erro ao processar o registro: ' . $e->getMessage(), 'danger');
+            echo $this->view->render('Erro ao processar o registro: ' . $e->getMessage(), 'danger');
         }
     }
 }

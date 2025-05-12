@@ -1,15 +1,18 @@
 <?php
-require_once __DIR__ . '/src/core/Router.php';
-require_once __DIR__ . '/src/controllers/RegisterController.php';
 
-use Core\Router;
+require_once __DIR__ . '/src/core/Autoloader.php';
 
-$router = new Router();
+use Core\Autoloader;
+use Core\Routes;
 
-// Adiciona a rota para o registro
-$router->addRoute('bank-me/register', 'RegisterController', 'render');
-$router->addRoute('bank-me/registerPost', 'RegisterController', 'processRegistration');
+Autoloader::register();
 
-// Despacha a requisição
-$uri = $_SERVER['REQUEST_URI'];
-echo $router->dispatch($uri);
+// Definindo as rotas
+Routes::add('/bank-me', 'Controllers\HomeController', 'index');
+Routes::add('/bank-me/login', 'Controllers\LoginController', 'index');
+Routes::add('/bank-me/register', 'Controllers\RegisterController', 'index');
+Routes::add('/bank-me/registerPost', 'Controllers\RegisterController', 'processRegistration');
+
+
+// Despachando a rota
+Routes::dispatch();

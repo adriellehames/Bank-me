@@ -1,3 +1,12 @@
+<?php
+
+namespace Views;
+
+class LoginView {
+
+    public function render() {
+       
+        return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,3 +76,7 @@
 
 </body> 
 </html> 
+HTML;
+    }
+}
+?>
