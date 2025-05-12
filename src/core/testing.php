@@ -1,8 +1,8 @@
 <?php
 
-include("../models/register.php");
+include("../models/RegisterModel.php");
 
-$user = new Register('adri','hames','cpf', 'rg','2000-01-01', '9321921', 'SC', 'saojose', 'bairroas', 'endereco', 390, 'casa', 3000, 'dev', '4831821321', 'aa ', 'adsasd@dass.com', '2025-01-01', 'pending', NULL );
+$user = new RegisterModel('adri','hames','cpf', 'rg','2000-01-01', '9321921', 'SC', 'saojose', 'bairroas', 'endereco', 390, 'casa', 3000, 'dev', '4831821321', 'aa ', 'adsasd@dass.com', '2025-01-01', 'pending', NULL );
 
 // $resultado = $conexao->fetchQuery('SELECT * FROM users');
 try {

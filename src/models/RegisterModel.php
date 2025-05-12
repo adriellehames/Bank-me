@@ -4,7 +4,7 @@
 require_once '../core/Database.php'; //importantado o arquivo Database.php
 
 
-class Register
+class RegisterModel
 {
     private $id;
     private $name;
