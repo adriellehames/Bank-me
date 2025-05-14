@@ -1,5 +1,5 @@
 <?php
-namespace Integrations;
+namespace Views;
 
 class IntegrationView
 {

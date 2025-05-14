@@ -1,5 +1,5 @@
 <?php
-namespace Features;
+namespace Views;
 
 class FeaturesView
 {

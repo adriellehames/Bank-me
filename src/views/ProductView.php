@@ -1,6 +1,6 @@
 <?php
 
-namespace Product;
+namespace Views;
 
 class ProductView
 {
