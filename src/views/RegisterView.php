@@ -1,8 +1,22 @@
 <?php
 
+namespace Views;
 
-?>
+class RegisterView {
+    private $message = '';
+    private $messageType = '';
 
+    public function render($message = '', $messageType = '') {
+        $this->message = $message;
+        $this->messageType = $messageType;
+
+        $messageStyle = $this->message ? 'display: block;' : 'display: none;';
+        $messageClass = $this->messageType === 'success' ? 'alert-success' : 'alert-danger';
+
+        return <<<HTML
+
+ 
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -200,4 +214,6 @@
 
 
 </body>
-</html>
+HTML;
+    }
+}
