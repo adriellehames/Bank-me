@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Views\FeaturesView;
+use View\FeatureView;
  
 
 class FeacturesController
@@ -8,7 +8,7 @@ class FeacturesController
 private $view;
 
     public function __construct() {
-        $this->view= new FeaturesView(); 
+        $this->view= new FeatureView(); 
     }
 
     public function index()

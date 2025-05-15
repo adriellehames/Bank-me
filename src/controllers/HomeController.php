@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Views\HomeView;
+use View\HomeView;
 
 class HomeController
 {

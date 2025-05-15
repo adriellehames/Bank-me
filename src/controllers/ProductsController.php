@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Views\ProductView;
+use View\ProductView;
  
 class ProductController
 {

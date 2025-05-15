@@ -1,23 +1,16 @@
 <?php
+namespace View;
 
-namespace Views;
+class HomeView
+{
 
-class RegisterView {
-    private $message = '';
-    private $messageType = '';
+    public function __construct() {}
 
-    public function render($message = '', $messageType = '') {
-        $this->message = $message;
-        $this->messageType = $messageType;
-
-        $messageStyle = $this->message ? 'display: block;' : 'display: none;';
-        $messageClass = $this->messageType === 'success' ? 'alert-success' : 'alert-danger';
+    public function render()
+    {
 
         return <<<HTML
-
- 
- 
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -115,15 +108,15 @@ class RegisterView {
             </button>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="pages/products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/feactures.html">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/integration.html">Integrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Product'>Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Feacture'>Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Integration'>Integration</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Resource'>Resource</a></li>
                 </ul>
 
                 <div class="d-flex auth-links">
-                    <a class="btn btn-warning me-2" href="pages/login.html">Login</a>
-                    <a class="btn btn-light" href="pages/register.html">Register</a>
+                    <a class="btn btn-warning me-2" href='/bank-me/Login'>Login</a>
+                    <a class="btn btn-light" href='/bank-me/Register'>Register</a>
                 </div>
             </div>
 
@@ -139,10 +132,10 @@ class RegisterView {
         </div>
         <div class="offcanvas-body">
             <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link text-white" href="#">Products</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Product</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#">Features</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Integrations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Resources</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Integration</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Resource</a></li>
                 <li class="nav-item mt-3"><a class="btn btn-warning w-100" href="#">Login</a></li>
                 <li class="nav-item mt-2"><a class="btn btn-light w-100" href="#">Register</a></li>
             </ul>
@@ -190,10 +183,10 @@ class RegisterView {
                 <!-- Menu Links -->
                 <div class="col-12 mb-3">
                     <div class="footer-links">
-                        <a href="#" class="text-white me-4">Products</a>
+                        <a href="#" class="text-white me-4">Product</a>
                         <a href="#" class="text-white me-4">Features</a>
-                        <a href="#" class="text-white me-4">Integrations</a>
-                        <a href="#" class="text-white">Resources</a>
+                        <a href="#" class="text-white me-4">Integration</a>
+                        <a href="#" class="text-white">Resource</a>
                     </div>
                 </div>
                 <!-- Logo -->
@@ -214,6 +207,7 @@ class RegisterView {
 
 
 </body>
+</html>
 HTML;
     }
 }

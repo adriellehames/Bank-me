@@ -1,8 +1,8 @@
 <?php
 
-namespace Views;
+namespace View;
 
-class ResourcesView
+class ResourceView
 {
 
     public function __construct()
@@ -104,23 +104,23 @@ class ResourcesView
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-             <a href="../index.html" > <img src="../assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
+            <a class="navbar-brand" href='/bank-me'>
+             <a href='/bank-me' > <img src="../assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feactures.html">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="integration.html">Integrations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Product'>Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Feacture'>Feature</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Integration'>Integration</a></li>
+                    <li class="nav-item"><a class="nav-link" href='/bank-me/Resource'>Resource</a></li>
                 </ul>
 
                 <div class="d-flex auth-links">
-                    <a class="btn btn-warning me-2" href="#">Login</a>
-                    <a class="btn btn-light" href="registrer.html">Register</a>
+                    <a class="btn btn-warning me-2" href='/bank-me/Login'>Login</a>
+                    <a class="btn btn-light" href='/bank-me/Register'>Register</a>
                 </div>
             </div>
 
@@ -135,19 +135,19 @@ class ResourcesView
         </div>
         <div class="offcanvas-body">
             <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link text-white" href="products.html">Products</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="feactures.html">Features</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="integration.html">Integrations</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Resources</a></li>
-                <li class="nav-item mt-3"><a class="btn btn-warning w-100" href="login.html">Login</a></li>
-                <li class="nav-item mt-2"><a class="btn btn-light w-100" href="registrer.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href='/bank-me/Product'>Product</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href='/bank-me/Feacture'>Feature</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href='/bank-me/Integration'>Integration</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href='/bank-me/Resource'>Resource</a></li>
+                <li class="nav-item mt-3"><a class="btn btn-warning w-100" href='/bank-me/Login'>Login</a></li>
+                <li class="nav-item mt-2"><a class="btn btn-light w-100" href='/bank-me/Register'>Register</a></li>
             </ul>
         </div>
     </div>
 
 
     <div class="container"> 
-        <span> Resources </span> 
+        <span> Resource </span> 
     </div> 
 
 
@@ -160,10 +160,10 @@ class ResourcesView
                     <!-- Menu Links -->
                     <div class="col-12 mb-3">
                         <div class="footer-links">
-                            <a href="products.html" class="text-white me-4">Products</a>
-                            <a href="feactures.html" class="text-white me-4">Features</a>
-                            <a href="integration.html" class="text-white me-4">Integrations</a>
-                            <a href="#" class="text-white">Resources</a>
+                            <a href='/bank-me/Product' class="text-white me-4">Product</a>
+                            <a href='/bank-me/Feacture' class="text-white me-4">Feature</a>
+                            <a href='/bank-me/Integration' class="text-white me-4">Integration</a>
+                            <a href='/bank-me/Resource' class="text-white">Resource</a>
                         </div>
                     </div>
                     <!-- Logo -->

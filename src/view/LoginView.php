@@ -1,5 +1,5 @@
 <?php
-namespace Views;
+namespace View;
 
 class LoginView
 {
@@ -42,7 +42,7 @@ class LoginView
         
                 <div class="col p-2 d-flex justify-content-between align-items-center fs-4  ">
                     <p class="p text-white ">Efetue seu Login</p>
-                    <a class="navbar-brand fw-bold" href= "../index.html">
+                    <a class="navbar-brand fw-bold" href= '/bank-me'>
                         <img src="../assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me
                     </a>
                 </div>

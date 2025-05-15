@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use Views\LoginView;
+use View\LoginView;
  
 class LoginController 
 {

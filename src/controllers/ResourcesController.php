@@ -1,13 +1,13 @@
 <?php
 namespace Controllers;
-use Views\ResourcesView;
+use View\ResourceView;
  
-class ResourcesController 
+class ResourceController 
 {
 private $view;
 
     public function __construct() {
-        $this->view= new ResourcesView(); 
+        $this->view= new ResourceView(); 
     }
 
     public function index()
