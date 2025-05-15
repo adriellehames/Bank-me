@@ -98,8 +98,8 @@ class FeatureView
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href='/bank-me'
-                        <a href='/bank-me'><img src="../assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
+                    <a class="navbar-brand" href='/bank-me'>
+                        <a href='/bank-me'><img src="../assets/images/logo.png" alt="Logo" width="34" height="42">bank.me</a>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                         <span class="navbar-toggler-icon"></span>
