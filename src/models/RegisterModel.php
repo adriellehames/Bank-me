@@ -1,5 +1,5 @@
 <?php
-
+namespace models;
 
 require_once '../core/Database.php'; //importantado o arquivo Database.php
 
