@@ -1,5 +1,5 @@
 <?php
-namespace View;
+namespace Views;
 
 class HomeView
 {
@@ -183,10 +183,10 @@ class HomeView
                 <!-- Menu Links -->
                 <div class="col-12 mb-3">
                     <div class="footer-links">
-                        <a href="#" class="text-white me-4">Product</a>
-                        <a href="#" class="text-white me-4">Features</a>
-                        <a href="#" class="text-white me-4">Integration</a>
-                        <a href="#" class="text-white">Resource</a>
+                        <a href='/bank-me/Product' class="text-white me-4">Product</a>
+                        <a href='/bank-me/Feacture' class="text-white me-4">Features</a>
+                        <a href='/bank-me/Integration' class="text-white me-4">Integration</a>
+                        <a href='/bank-me/Resource' class="text-white">Resource</a>
                     </div>
                 </div>
                 <!-- Logo -->

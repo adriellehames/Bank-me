@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use View\FeatureView;
+use Views\FeatureView;
  
 
 class FeacturesController

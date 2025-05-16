@@ -1,8 +1,8 @@
 <?php
 namespace Controllers;
-use View\ResourceView;
+use Views\ResourceView;
  
-class ResourceController 
+class ResourcesController 
 {
 private $view;
 

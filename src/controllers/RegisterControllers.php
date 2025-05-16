@@ -2,7 +2,7 @@
 namespace Controllers;
 
 use models\RegisterModel;
-use View\RegisterView;
+use Views\RegisterView;
 
  
 class RegisterController
@@ -12,7 +12,7 @@ public $models;
 
     public function __construct() {
         $this->view= new RegisterView(); 
-        $this->models= new RegisterModel(); 
+        //$this->models= new RegisterModel(); 
     }
     public function signup(RegisterController $models) {
 

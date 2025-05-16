@@ -1,8 +1,8 @@
 <?php
 namespace Controllers;
-use View\ProductView;
+use Views\ProductView;
  
-class ProductController
+class ProductsController
 {
 private $view;
 

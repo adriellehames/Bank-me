@@ -1,6 +1,6 @@
 <?php
 namespace Controllers;
-use View\IntegrationView;
+use Views\IntegrationView;
  
 class IntegrationController 
 {

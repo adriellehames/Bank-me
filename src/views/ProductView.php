@@ -1,6 +1,6 @@
 <?php
 
-namespace View;
+namespace Views;
 
 class ProductView
 {
@@ -101,7 +101,7 @@ class ProductView
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
                 <div class="container-fluid">
                     <a class="navbar-brand" href='/bank-me'>
-                     <a href='/bank-me' > <img src="../assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
+                     <a href='/bank-me' > <img src="assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
                         <span class="navbar-toggler-icon"></span>
@@ -167,7 +167,7 @@ class ProductView
                             <!-- Logo -->
                             <div class="col-12 mb-3">
                                 <div class="footer-logo d-flex justify-content-center align-items-center">
-                                    <img src="../assets/images/logo.png" alt="Bank.me Logo" width="28" height="28" />
+                                    <img src="assets/images/logo.png" alt="Bank.me Logo" width="28" height="28" />
                                     <span class="ms-2 fs-4 fw-bold">bank.me</span>
                                 </div>
                             </div>
