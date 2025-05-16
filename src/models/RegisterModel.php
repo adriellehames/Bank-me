@@ -1,7 +1,9 @@
 <?php
 namespace models;
 
-require_once '../core/Database.php'; //importantado o arquivo Database.php
+use Core\Database; 
+use Exception;
+use \DateTime;
 
 
 class RegisterModel
@@ -78,7 +80,7 @@ class RegisterModel
 
 
 
-    private function validation()
+    public function validation()
     {
         //Listando campos obrigatórios-array associativo
         $required_fields = [
@@ -95,10 +97,7 @@ class RegisterModel
             'number' => $this->number,
             'complement' => $this->complement,
             'telephone' => $this->telephone,
-            'document_photo' => $this->document_photo,
             'email' => $this->email,
-            'request_date' => $this->request_date,
-            'status_register' => $this->status_register,
 
         ];
 
