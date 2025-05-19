@@ -154,9 +154,9 @@ class RegisterModel
 
             $this->db->executeQuery($query, $params); //executando a inserção de dados
 
-            echo "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
+            return "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
         } catch (Exception $e) {
-            echo "Erro no cadastro: " . $e->getMessage();
+            throw new Exception( "Erro no cadastro: " . $e->getMessage());
         }
     }
 }
