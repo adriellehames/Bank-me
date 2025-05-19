@@ -2,23 +2,26 @@
 
 namespace Views;
 
-class RegisterView {
+class RegisterView
+{
     private $message = '';
     private $messageType = '';
 
-    public function render($message = '', $messageType = '') {
+    public function render($message = '', $messageType = '')
+    {
         $this->message = $message;
         $this->messageType = $messageType;
 
         $messageStyle = $this->message ? 'display: block;' : 'display: none;';
         $messageClass = $this->messageType === 'success' ? 'alert-success' : 'alert-danger';
 
+
+
         return <<<HTML
 
  
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,15 +50,19 @@ class RegisterView {
         <div class="col p-2 d-flex justify-content-between align-items-center fs-4  ">
             <p class="p text-white ">Efetue seu Pré-registro</p>
             <a class="navbar-brand fw-bold" href= "../index.html">
-                <img src="assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me
+             <a href='/bank-me' >   <img src="assets/images/logo.png" alt="Logo" width="34" height="42"> bank.me</a>
             </a>
         </div>
 
     </nav>
-
+<div class="message-container">
+                <div class="alert {$messageClass}" style="{$messageStyle}" role="alert">
+                    {$this->message}
+                </div>
+            </div>
 
     <div class="row mb-1 mx-1 form-custom">
-        <form action="../src/models/register.php" method="POST" enctype="multipart/form-data">
+        <form action="/bank-me/Signup" method="POST" enctype="multipart/form-data">
 
             <div class="col form-custom">
                 <p class="p text-dark"> Digite seu Nome:</p>

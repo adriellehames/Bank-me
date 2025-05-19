@@ -1,7 +1,9 @@
 <?php
 namespace models;
 
-require_once '../core/Database.php'; //importantado o arquivo Database.php
+use Core\Database; 
+use Exception;
+use \DateTime;
 
 
 class RegisterModel
@@ -78,7 +80,7 @@ class RegisterModel
 
 
 
-    private function validation()
+    public function validation()
     {
         //Listando campos obrigatórios-array associativo
         $required_fields = [
@@ -95,10 +97,7 @@ class RegisterModel
             'number' => $this->number,
             'complement' => $this->complement,
             'telephone' => $this->telephone,
-            'document_photo' => $this->document_photo,
             'email' => $this->email,
-            'request_date' => $this->request_date,
-            'status_register' => $this->status_register,
 
         ];
 
@@ -155,9 +154,9 @@ class RegisterModel
 
             $this->db->executeQuery($query, $params); //executando a inserção de dados
 
-            echo "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
+            return "Pré-Cadastro efetuado com sucesso, enviaremos um link de confirmação para o seu email!";
         } catch (Exception $e) {
-            echo "Erro no cadastro: " . $e->getMessage();
+            throw new Exception( "Erro no cadastro: " . $e->getMessage());
         }
     }
 }

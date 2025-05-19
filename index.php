@@ -15,6 +15,7 @@ Routes::add('/bank-me/Integration', 'Controllers\IntegrationController', 'index'
 Routes::add('/bank-me/Login', 'Controllers\LoginController', 'index');
 Routes::add('/bank-me/Product', 'Controllers\ProductsController', 'index');
 Routes::add('/bank-me/Resource', 'Controllers\ResourcesController', 'index');
+Routes::add('/bank-me/Signup', 'Controllers\RegisterController', 'signup');
 
 
 

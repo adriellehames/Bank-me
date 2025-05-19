@@ -1,6 +1,7 @@
 <?php
+namespace Core;
 
-class Database extends PDO
+class Database extends \PDO
 {
 
   private $DB_NAME = 'bank_me';
@@ -12,7 +13,7 @@ class Database extends PDO
 
   public function __construct()
   {
-    $this->conn = new PDO("mysql:host=$this->DB_HOST;dbname=$this->DB_NAME", $this->DB_USER, $this->DB_PASSWORD);
+    $this->conn = new \PDO("mysql:host=$this->DB_HOST;dbname=$this->DB_NAME", $this->DB_USER, $this->DB_PASSWORD);
   }
 
 
