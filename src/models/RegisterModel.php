@@ -98,6 +98,7 @@ class RegisterModel
             'complement' => $this->complement,
             'telephone' => $this->telephone,
             'email' => $this->email,
+            'document_photo' => $this->document_photo
 
         ];
 

@@ -144,7 +144,7 @@ class RegisterView
 
             <div class="col form-custom">
                 <p class="p text-dark">Faça upload do de uma foto do seu documento :</p>
-                <input type="file" class="form-control" placeholder="foto do documento" name="document_photo">
+                <input type="file" class="form-control" name="document_photo" placeholder="foto do documento" >
             </div>
 
             <div class="col form-custom">
@@ -159,7 +159,7 @@ class RegisterView
 
             <div class="col form-custom">
                 <p class="p text-dark">Confirme sua senha :</p>
-                <input type="password" class="form-control" placeholder="senha" name="senha">
+                <input type="password" class="form-control" placeholder="senha" name="senha_confirm">
             </div>
 
 
