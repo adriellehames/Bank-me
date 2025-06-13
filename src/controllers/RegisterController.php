@@ -57,7 +57,12 @@ public function signup()
 
         if (in_array($fileExtension, $allowedfileExtensions)) {
             $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
-            $uploadFileDir =  __DIR__ . '/uploads/';
+            $uploadFileDir =  __DIR__ . '/../../uploads/documents/';
+
+ // Garantir que a pasta upload seja criada
+        if (!file_exists($uploadFileDir )) {
+            mkdir($uploadFileDir , 0777, true);
+        }
             $dest_path = $uploadFileDir . $newFileName;
 
             if (move_uploaded_file($fileTmpPath, $dest_path)) {
