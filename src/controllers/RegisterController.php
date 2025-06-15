@@ -18,10 +18,7 @@ class RegisterController
     }
 public function signup()
 {
-     echo "<pre>";
-    print_r($_FILES);
-    echo "</pre>";
-
+ 
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $cpf = $_POST["cpf"];
@@ -37,7 +34,7 @@ public function signup()
     $monthly_income = $_POST["monthly_income"];
     $profession = $_POST["profession"];
     $telephone = $_POST["telephone"];
-    $document_photo = ""; // <- aqui está o ponto de inserção
+    $document_photo = "";
     $email = $_POST["email"];
     $request_date = "";
     $status_register = "";
@@ -48,8 +45,6 @@ public function signup()
     if (isset($_FILES['document_photo']) && $_FILES['document_photo']['error'] === UPLOAD_ERR_OK) {
         $fileTmpPath = $_FILES['document_photo']['tmp_name'];
         $fileName = $_FILES['document_photo']['name'];
-        $fileSize = $_FILES['document_photo']['size'];
-        $fileType = $_FILES['document_photo']['type'];
         $fileNameCmps = explode(".", $fileName);
         $fileExtension = strtolower(end($fileNameCmps));
 
@@ -57,11 +52,9 @@ public function signup()
 
         if (in_array($fileExtension, $allowedfileExtensions)) {
             $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
-            $uploadFileDir =  __DIR__ . '/../../uploads/documents/';
+            $uploadFileDir =  __DIR__. '/uploads/';
 
- // Garantir que a pasta upload seja criada
-        if (!file_exists($uploadFileDir )) {
-            mkdir($uploadFileDir , 0777, true);
+
         }
             $dest_path = $uploadFileDir . $newFileName;
 
@@ -76,15 +69,8 @@ public function signup()
             return;
         }
 
-     echo "<pre>";
-    print_r($_FILES);
-    echo "</pre>";
 
-
-    } else {
-        echo "Erro no envio do arquivo." ;
-        return;
-    }
+    
 
     // Cria o modelo com os dados recebidos
     $this->models = new RegisterModel(
@@ -157,4 +143,4 @@ $db = new Database();
         echo $this->view->render();
     }
 }
- print_r($_FILES);
+print_r($_FILES);
