@@ -1,21 +1,32 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+💳 Bank.me - Simulador de Banco Digital
+Bank.me é um projeto de estudo que simula um sistema bancário digital, com funcionalidades como cadastro, login, visualização de saldo e transferências bancárias simuladas. O objetivo do projeto é aprender e praticar o desenvolvimento de sistemas financeiros utilizando uma arquitetura profissional.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
-5. Test 
+🛠️ Tecnologias Utilizadas:
+PHP (backend)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+MySQL (banco de dados)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+PDO (conexão segura entre PHP e MySQL)
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+HTML e CSS (desenvolvimento das páginas)
+
+Bootstrap (melhoria da responsividade e interface)
+
+📐 Arquitetura:
+Estruturado no padrão MVC (Model-View-Controller), separando responsabilidades entre as camadas de controle, lógica e apresentação.
+
+📌 Funcionalidades:
+Cadastro e login de clientes.
+
+Armazenamento seguro dos dados no banco MySQL.
+
+Visualização do saldo da conta (simulado).
+
+Transferências bancárias simuladas entre contas.
+
+Layout responsivo e amigável.
+
+📬 Em desenvolvimento:
+Integração com API de envio de e-mail para confirmação de cadastro.
+
+Expansão futura para movimentações financeiras mais complexas.
