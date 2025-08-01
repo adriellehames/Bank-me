@@ -1,3 +1,5 @@
+Veja o Desing do projeto: https://imgur.com/a/NIxLF0I
+
 💳 Bank.me - Simulador de Banco Digital
 Bank.me é um projeto de estudo que simula um sistema bancário digital, com funcionalidades como cadastro, login, visualização de saldo e transferências bancárias simuladas. O objetivo do projeto é aprender e praticar o desenvolvimento de sistemas financeiros utilizando uma arquitetura profissional.
 
@@ -30,3 +32,4 @@ Layout responsivo e amigável.
 Integração com API de envio de e-mail para confirmação de cadastro.
 
 Expansão futura para movimentações financeiras mais complexas.
+
